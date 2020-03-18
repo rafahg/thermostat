@@ -5,7 +5,7 @@ describe('thermostat',function() {
   beforeEach(function() {
     thermostat = new Thermostat();
   });
-  it('starts at twenty, cunt',function(){
+  it('starts at twenty',function(){
     expect(thermostat.temperature).toEqual(20);
   });
   it('increase temperature by 1 degree',function(){
@@ -45,5 +45,17 @@ describe('thermostat',function() {
     thermostat.up(2);
     thermostat.reset();
     expect(thermostat.temperature).toEqual(20);
+  });
+  it('returns low-usage if temp < 18', function() {
+    thermostat.down(3)
+    expect(thermostat.usage()).toEqual("low-usage");
+  });
+  it('returns high-usage if temp > 24', function() {
+    thermostat.up(9)
+    expect(thermostat.usage()).toEqual("high-usage");
+  });
+  it('returns medium-usage if temp is < 25', function() {
+    thermostat.up(3)
+    expect(thermostat.usage()).toEqual("medium-usage");
   });
 });
