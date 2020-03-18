@@ -5,6 +5,4 @@ the termostat. It is going to be painful, but i hope, if some day, someone read 
 , will enjoy as much as i did creating it. (If you see some grammar errors it is
   because i am from Spain, i fancy more Cervantes than Shakespeare, to be honest).
 
-  ENJOY!.
-
-  
+  ENJOY!..
